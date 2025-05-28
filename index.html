@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleo-Hidráulica VP - Soluciones Hidráulicas Profesionales</title>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i data-lucide="settings"></i>
+                Oleo-Hidráulica VP
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- WhatsApp Button -->
+    <button class="whatsapp-btn" onclick="openWhatsApp()">
+        <i data-lucide="message-circle"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Soluciones Hidráulicas Profesionales</h1>
+            <p>Especialistas en sistemas hidráulicos con más de una década de experiencia. Calidad, confiabilidad y servicio excepcional.</p>
+            <a href="#productos" class="cta-button">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre <span>Nosotros</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Oleo-Hidráulica VP es una empresa familiar especializada en soluciones hidráulicas integrales. Con más de 15 años en el mercado, nos hemos consolidado como líderes en la provisión de componentes hidráulicos de alta calidad.</p>
+                    <p>Nuestro compromiso es brindar productos confiables y duraderos que satisfagan las necesidades más exigentes de nuestros clientes en diversos sectores industriales.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500</span>
+                        <span class="stat-label">Clientes Satisfechos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000</span>
+                        <span class="stat-label">Productos Instalados</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <!-- Descomenta y reemplaza con la URL de la imagen real -->
+                        <!-- <img src="/api/placeholder/120/120" alt="Vicente Pérez"> -->
+                        <i data-lucide="user"></i>
+                    </div>
+                    <h3 class="team-name">Vicente Pérez</h3>
+                    <p class="team-role">Director General</p>
+                    <p class="team-description">Fundador de la empresa con amplia experiencia en sistemas hidráulicos industriales. Especialista en asesoramiento técnico y desarrollo de soluciones personalizadas.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <!-- Descomenta y reemplaza con la URL de la imagen real -->
+                        <img src="./Img/avatar.avif" alt="Patricia Villalba">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <h3 class="team-name">Patricia Villalba</h3>
+                    <p class="team-role">Gerente Comercial</p>
+                    <p class="team-description">Responsable de las relaciones comerciales y atención al cliente. Coordina las ventas y garantiza la satisfacción de nuestros clientes.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <!-- Descomenta y reemplaza con la URL de la imagen real -->
+                        <!-- <img src="/api/placeholder/120/120" alt="Carlos Méndez"> -->
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3 class="team-name">Carlos Méndez</h3>
+                    <p class="team-role">Técnico Especialista</p>
+                    <p class="team-description">Ingeniero técnico especializado en instalación y mantenimiento de sistemas hidráulicos. Encargado del soporte técnico post-venta.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <!-- Descomenta y reemplaza con la URL de la imagen real -->
+                        <!-- <img src="/api/placeholder/120/120" alt="Ana González"> -->
+                        <i data-lucide="package"></i>
+                    </div>
+                    <h3 class="team-name">Ana González</h3>
+                    <p class="team-role">Encargada de Logística</p>
+                    <p class="team-description">Gestiona el inventario y la distribución de productos. Asegura la disponibilidad y entrega oportuna de todos nuestros componentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="section products">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Productos</span></h2>
+            
+            <!-- Mensaje inicial (se oculta cuando se selecciona un filtro) -->
+            <div class="no-filter-message" style="text-align: center; margin: 2rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+                <p style="font-size: 1.1rem; color: #666;">Selecciona una categoría para ver nuestros productos y descargar el catálogo correspondiente.</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn" data-filter="all">Todos los Productos</button>
+                <button class="filter-btn" data-filter="bombas">Bombas</button>
+                <button class="filter-btn" data-filter="direcciones">Direcciones Orbitales</button>
+                <button class="filter-btn" data-filter="valvulas">Válvulas de Comando</button>
+                <button class="filter-btn" data-filter="electrovalvulas">Electroválvulas</button>
+                <button class="filter-btn" data-filter="mangueras">Mangueras Hidráulicas</button>
+            </div>
+
+            <div class="product-gallery" id="productGallery">
+                <!-- Bombas -->
+                <div class="product-card" data-category="bombas">
+                    <div class="product-image-piston">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bomba Hidráulica de Pistón</h3>
+                        <p class="product-description">Bombas de alta presión y eficiencia para aplicaciones industriales exigentes.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="bombas">
+                    <div class="product-image-engranaje">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bomba de Engranajes</h3>
+                        <p class="product-description">Soluciones robustas y confiables para sistemas de media presión.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="bombas">
+                    <div class="product-image-Tornillo">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bomba de Tornillo</h3>
+                        <p class="product-description">Soluciones robustas y confiables para sistemas de media presión.</p>
+                    </div>
+                </div>
+
+                <!-- Direcciones Orbitales -->
+                <div class="product-card" data-category="direcciones">
+                    <div class="product-image">
+                        <i data-lucide="rotate-3d"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Dirección Orbital Compacta</h3>
+                        <p class="product-description">Control preciso de dirección para maquinaria agrícola e industrial.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="direcciones">
+                    <div class="product-image">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Dirección Orbital de Alta Capacidad</h3>
+                        <p class="product-description">Para aplicaciones de gran tonelaje y alta demanda operativa.</p>
+                    </div>
+                </div>
+
+                <!-- Válvulas de Comando -->
+                <div class="product-card" data-category="valvulas">
+                    <div class="product-image">
+                        <i data-lucide="settings-2"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Válvula de Comando Monoblock</h3>
+                        <p class="product-description">Control integral de flujo hidráulico con múltiples funciones.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="valvulas">
+                    <div class="product-image">
+                        <i data-lucide="sliders-horizontal"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Válvula Sectorial</h3>
+                        <p class="product-description">Sistemas modulares para configuraciones personalizadas.</p>
+                    </div>
+                </div>
+
+                <!-- Electroválvulas -->
+                <div class="product-card" data-category="electrovalvulas">
+                    <div class="product-image">
+                        <i data-lucide="zap-off"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Electroválvula Proporcional</h3>
+                        <p class="product-description">Control electrónico preciso de caudal y presión.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="electrovalvulas">
+                    <div class="product-image">
+                        <i data-lucide="power"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Electroválvula On/Off</h3>
+                        <p class="product-description">Soluciones de control digital para automatización industrial.</p>
+                    </div>
+                </div>
+
+                <!-- Mangueras -->
+                <div class="product-card" data-category="mangueras">
+                    <div class="product-image">
+                        <i data-lucide="cable"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Manguera SAE 100 R1</h3>
+                        <p class="product-description">Mangueras de alta presión con refuerzo de alambre trenzado.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="mangueras">
+                    <div class="product-image">
+                        <i data-lucide="waves"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Manguera SAE 100 R2</h3>
+                        <p class="product-description">Para aplicaciones de muy alta presión con doble refuerzo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de descarga PDF (inicialmente oculta) -->
+            <div id="pdfDownloadSection" class="pdf-download-section" style="display: none; text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px;">
+                <button id="pdfDownloadBtn" class="pdf-download-btn" style="background: white; color: #333; border: none; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <i data-lucide="download"></i>
+                    Ver más información (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Ponte en <span>Contacto</span></h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-input" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-input" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-textarea" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3><i data-lucide="share-2"></i> Redes Sociales</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="Facebook">
+                                <i data-lucide="facebook"></i>
+                            </a>
+                            <a href="#" class="social-link" title="Instagram">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" title="LinkedIn">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" title="YouTube">
+                                <i data-lucide="youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3><i data-lucide="map-pin"></i> Nuestra Ubicación</h3>
+                        <div class="map-container">
+                            <div>
+                                <i data-lucide="map-pin" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Haz clic para ver nuestra ubicación en el mapa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3><i data-lucide="phone"></i> Información de Contacto</h3>
+                        <p><strong>Teléfono:</strong> +54 9 XXX XXX-XXXX</p>
+                        <p><strong>Email:</strong> info@oleohidraulicavp.com</p>
+                        <p><strong>Horarios:</strong> Lun - Vie: 8:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Oleo-Hidráulica VP. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script debe ir al final del body -->
+    <script src="script.js"></script>
+</body>
+</html>
