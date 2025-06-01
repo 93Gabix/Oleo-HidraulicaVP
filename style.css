@@ -377,41 +377,230 @@
 
          /* FILTRO DE PRODUCTOS */
 
+
+        /* FILTRO DE ACUMULADORES */
+         .product-image-membrana {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Acumuladores/AcumulMembrana.png);
+            
+        }
+        .product-image-apiston {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Acumuladores/AcumuladorPiston.png);
+            
+        }
+        .product-image-vejiga {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Acumuladores/AcumuladorVejiga.png);
+        }
+
+        /* FILTRO DE BOMBAS */
         .product-image-engranaje {
-            height: 200px;
-            background-image: url(./img/BombaEngranaje.png);
-            background-size: cover;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            background-size: cover;
+            background-image: url(./img/Bombas/Bengranajes.png);
         }
 
-        .product-image-piston {
-            height: 200px;
-            background-image: url(./img/BombaPiston.png);
-            background-size: cover;
+        .product-image-eagricolas {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            background-size: cover;
+            background-image: url(./img/Bombas/Eagricolas.png);
         }
 
-        .product-image-Tornillo {
-            height: 200px;
-            background-image: url(./Img/BombaTornillo.png);
-            background-size: cover;
+        .product-image-Bpistones {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            background-size: cover;
+            background-image: url(./img/Bombas/Bpistones.png);
         }
+
+        /* CILINDROS HIDRAULICOS */
+        .product-image-cilihidrulicos {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/CilindrosHidráulicos/cilindroshidraulicos.png);
+        }
+
+        .product-image-dobleagujero {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/CilindrosHidráulicos/cilindrosdobleagujero.png);
+        }
+
+        .product-image-doblevastago {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/CilindrosHidráulicos/cilindrosdoble.png);
+        }
+
+        /* Electro Válvulas */
+        .product-image-valvulatn6-10 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ElectroValvulas/ValvulaTN6-10.png);
+        }
+
+        .product-image-valvulatn10-20-30 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ElectroValvulas/TN10-20-30.png);
+        }
+
+        .product-image-valvulatn10-25-32 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ElectroValvulas/TN10-25-32.png);
+        }
+
+        /* Elementos Transmisión */
+        .product-image-acopestrella {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ElementosTransmision/acoplamientoestrella.png);
+        }
+
+        .product-image-lintmodular {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img//ElementosTransmision/linternamodular.png);
+        }
+
+        .product-image-manguitossae {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ElementosTransmision/manguitossae.png);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 
