@@ -45,7 +45,7 @@ function sendEmail(event) {
     `;
     
     // Create mailto link
-    const mailtoLink = `mailto:info@oleohidraulicavp.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:gabrielmelano19@gmail.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -196,12 +196,11 @@ revealElements.forEach(el => {
 function downloadPDF(category, categoryName) {
     // PDF URLs for each category
     const pdfUrls = {
-        'bombas': './pdfs/catalogo-bombas.pdf',
-        'direcciones': './pdfs/catalogo-direcciones-orbitales.pdf',
-        'valvulas': './pdfs/catalogo-valvulas-comando.pdf',
-        'electrovalvulas': './pdfs/catalogo-electrovalvulas.pdf',
-        'mangueras': './pdfs/catalogo-mangueras-hidraulicas.pdf',
-        'todo': './pdfs/catalogo-oleohidraulica-vp.pdf'
+        'acumuladores': './pdfs/Acumuladores.pdf',
+        'bombas': './pdfs/Bombas.pdf',
+        'cilindroshidráulicos': './pdfs/CilindrosHidráulicos.pdf',
+        'electrovalvulas': './pdfs/ElectroválvulasVálvulasModularesMontaje.pdf',
+        'elemtransmision': './pdfs/Elementos de transmisión-AcoplamientoselásticosParamotoreléctrico.pdf',
     };
 
     const pdfUrl = pdfUrls[category];
@@ -235,6 +234,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const noFilterMessage = document.querySelector('.no-filter-message');
     const pdfSection = document.getElementById('pdfDownloadSection');
     const pdfBtn = document.getElementById('pdfDownloadBtn');
+    if (!filterButtons || !productCards || !noFilterMessage || !pdfSection || !pdfBtn) {
+        console.error('One or more elements not found.');
+        return;
+    }
 
     console.log('Filter buttons found:', filterButtons.length);
     console.log('Product cards found:', productCards.length);
@@ -242,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Category names in Spanish
     const categoryNames = {
         'all': 'Todos los Productos',
+        'acumuladores': 'Acumuladores',
         'bombas': 'Bombas',
         'direcciones': 'Direcciones Orbitales',
         'valvulas': 'Válvulas de Comando',
@@ -294,24 +298,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show PDF download section only if elements exist
             if (pdfSection && pdfBtn) {
-                pdfSection.style.display = 'block';
-                
-                // Update PDF button text and functionality
-                const categoryName = categoryNames[filter] || filter;
-                
-                // Use different PDF category for 'all' filter
-                const pdfCategory = filter === 'all' ? 'todo' : filter;
-                
-                pdfBtn.innerHTML = `<i data-lucide="download"></i> Ver más información de ${categoryName} (PDF)`;
-                
-                // Remove any existing click handlers and add new one
-                pdfBtn.onclick = function() {
-                    downloadPDF(pdfCategory, categoryName);
-                };
+                if (filter === 'all') {
+                    // OCULTAR la sección PDF cuando se selecciona "Todos"
+                    pdfSection.style.display = 'none';
+                } else {
+                    // MOSTRAR la sección PDF solo para categorías específicas
+                    pdfSection.style.display = 'block';
+                    
+                    // Update PDF button text and functionality
+                    const categoryName = categoryNames[filter] || filter;
+                    
+                    pdfBtn.innerHTML = `<i data-lucide="download"></i> Ver más información de ${categoryName} (PDF)`;
+                    
+                    // Remove any existing click handlers and add new one
+                    pdfBtn.onclick = function() {
+                        downloadPDF(filter, categoryName);
+                    };
+                }
 
                 // Recreate icons after updating innerHTML
                 lucide.createIcons();
             }
         });
     });
+});
 });
