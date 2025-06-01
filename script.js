@@ -247,10 +247,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'all': 'Todos los Productos',
         'acumuladores': 'Acumuladores',
         'bombas': 'Bombas',
-        'direcciones': 'Direcciones Orbitales',
-        'valvulas': 'Válvulas de Comando',
-        'electrovalvulas': 'Electroválvulas',
-        'mangueras': 'Mangueras Hidráulicas',
+        'cilindroshidraulicos': 'Cilindros Hidráulicos',
+        'electrovalvulas': 'Electroválvulas y Válvulas Modulares',
+        'elemtransmision': 'Elementos de Transmisión',
         'todo': 'Catálogo Oleohidráulica VP'
     };
 
@@ -321,5 +320,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 });
