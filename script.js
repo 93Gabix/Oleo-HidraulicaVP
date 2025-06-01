@@ -201,6 +201,10 @@ function downloadPDF(category, categoryName) {
         'cilindroshidráulicos': './pdfs/CilindrosHidráulicos.pdf',
         'electrovalvulas': './pdfs/ElectroválvulasVálvulasModularesMontaje.pdf',
         'elemtransmision': './pdfs/Elementos de transmisión-AcoplamientoselásticosParamotoreléctrico.pdf',
+        'enfriadores': './pdfs/EnfriadoresDeAire-aceite.pdf',
+        'filtracion': './pdfs/Filtración.pdf',
+
+
     };
 
     const pdfUrl = pdfUrls[category];
@@ -250,6 +254,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'cilindroshidraulicos': 'Cilindros Hidráulicos',
         'electrovalvulas': 'Electroválvulas y Válvulas Modulares',
         'elemtransmision': 'Elementos de Transmisión',
+        'enfriadores': 'Enfriadores',
+        'filtracion': 'Filtración',
         'todo': 'Catálogo Oleohidráulica VP'
     };
 

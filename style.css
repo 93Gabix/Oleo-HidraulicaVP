@@ -518,6 +518,62 @@
             background-image: url(./img/ElementosTransmision/manguitossae.png);
         }
 
+        /* Enfriadores Aceite - Aire */
+        .product-image-aceiteaire01 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Enfriadores/AcieiteAire.png);
+        }
+
+        .product-image-aceiteaire05 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Enfriadores/AcieiteAire05.png);
+        }
+
+        .product-image-aceiteaireAF1025 {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Enfriadores/AcieiteAireAF1025.png);
+        }
+
+        /* Filtración */
+        .product-image-Hydac {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Filtracion/paramontaje.png);
+        }
+
+        .product-image-retorno {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Filtracion/deretorno.png);
+        }
+
+        .product-image-limpieza {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Filtracion/proyectiles.png);
+        }
+
 
 
 
