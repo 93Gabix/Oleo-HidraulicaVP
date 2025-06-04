@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // WhatsApp function
 function openWhatsApp() {
     const message = "👷🏼 ¡Hola! Gracias por contactarnos. 👷🏼";
-    const phoneNumber = "5491234567890"; // Reemplaza con tu número de WhatsApp
+    const phoneNumber = "5493562515947"; // Reemplaza con tu número de WhatsApp
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
@@ -45,7 +45,7 @@ function sendEmail(event) {
     `;
     
     // Create mailto link
-    const mailtoLink = `mailto:gabrielmelano19@gmail.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:oleohidraulicavp@gmial.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -203,8 +203,19 @@ function downloadPDF(category, categoryName) {
         'elemtransmision': './pdfs/Elementos de transmisión-AcoplamientoselásticosParamotoreléctrico.pdf',
         'enfriadores': './pdfs/EnfriadoresDeAire-aceite.pdf',
         'filtracion': './pdfs/Filtración.pdf',
-
-
+        'instrumentos': './pdfs/Instrumentos.pdf',
+        'minicentral': './pdfs/Minicentrales.pdf',
+        'motoreshidraulicos': './pdfs/MotoresHidraulicos.pdf',
+        'placabase': './pdfs/PlacasBases.pdf',
+        'reductores': './pdfs/ReductoresMultiplicadores.pdf',
+        'tanques': './pdfs/TanquesYaccesorios.pdf',
+        'transhidro': './pdfs/TransmisionesHidrostaticas.pdf',
+        'valvdirec': './pdfs/ValvulasDireccionAccesorios.pdf',
+        'valvman': './pdfs/ValvulasDireccionalesManuales.pdf',
+        'valvlinea': './pdfs/ValvulasEnlinea.pdf',
+        'valvinsert': './pdfs/ValvulasInsertables.pdf',
+        'valvprop': './pdfs/ValvulasProporcionales.pdf',
+        'todo': './pdfs/CatálogoOleohidráulicaVP.pdf'
     };
 
     const pdfUrl = pdfUrls[category];
@@ -256,6 +267,18 @@ document.addEventListener('DOMContentLoaded', function() {
         'elemtransmision': 'Elementos de Transmisión',
         'enfriadores': 'Enfriadores',
         'filtracion': 'Filtración',
+        'instrumentos': 'Instrumentos',
+        'minicentral': 'Minicentrales',
+        'motoreshidraulicos': 'Motores Hidráulicos',
+        'placabase': 'Placas Base',
+        'reductores': 'Reductores',
+        'tanques': 'Tanques',
+        'transhidro': 'Transmisión Hidráulica',
+        'valvdirec': 'Válvulas de direccion',
+        'valvman': 'Válvulas Manuales',
+        'valvlinea': 'Válvulas Lineales',
+        'valvinsert': 'Válvulas Insertables',
+        'valvprop': 'Válvulas Proporcionales',
         'todo': 'Catálogo Oleohidráulica VP'
     };
 

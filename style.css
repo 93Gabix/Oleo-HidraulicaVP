@@ -574,92 +574,342 @@
             background-image: url(./img/Filtracion/proyectiles.png);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
+        /* Instrumentos */
+        .product-image-medpres {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Instrumentos/medpres.png);
+        }
+
+        .product-image-bajapres {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Instrumentos/rotambajapres.png);
+        }
+
+        .product-image-termostato {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/Instrumentos/termostato.png);
+        }
+
+        /* Mini Central Hidraulica */
+        .product-image-bloquevalv {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MiniCentrales/bloquevalv.png);
+        }
+
+        .product-image-motobomba {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MiniCentrales/motobomba.png);
+        }
+
+        .product-image-minihidr {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MiniCentrales/minihidr.png);
+        }
+
+        /* Motores Hidraulicos */
+        .product-image-motorhidra {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MotoresHidraulicos/motorengranaje.png);
+        }
+
+        .product-image-motorpiston {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MotoresHidraulicos/motorpistones.png);
+        }
+
+        .product-image-motororbi {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/MotoresHidraulicos/motororbital.png);
+        }
+
+
+        /* Placas bases */
+        .product-image-salidalateral {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/PlacasBase/salidalateral.png);
+        }
+
+        .product-image-manifoldsespe {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/PlacasBase/manifoldespe.png);
+        }
+
+        .product-image-manihot {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/PlacasBase/manihot.png);
+        }
+
+        /* Reductores, Multiplicadores */
+        .product-image-bridas {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ReductoresMultiplicadores/brida.png);
+        }
+
+        .product-image-enlace {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ReductoresMultiplicadores/enlace.png);
+        }
+
+        .product-image-multi {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ReductoresMultiplicadores/multiplic.png);
+        }
+
+        /* Tanques y Accesorios */
+        .product-image-tanque {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TanquesAccesorios/tanque.png);
+        }
+
+        .product-image-venteo {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TanquesAccesorios/venteo.png);
+        }
+
+        .product-image-bocas {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TanquesAccesorios/bocas.png);
+        }
+
+        /* Transmiciones Hidrostática  */
+        .product-image-pesado {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TransmHidrostaticas/pesado.png);
+        }
+
+        .product-image-circuito {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TransmHidrostaticas/circuito.png);
+        }
+
+        .product-image-motor {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/TransmHidrostaticas/motor.png);
+        }
+
+        /* Válvulas de dirección y accesorios  */
+        .product-image-valv {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionAcces/valvulas.png);
+        }
+
+        .product-image-direc {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionAcces/direc.png);
+        }
+
+        .product-image-pr {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionAcces/direcpr.png);
+        }
+
+        /* Válvulas direccionales manuales  */
+        .product-image-3direc {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionales/3direc.png);
+        }
+
+        .product-image-direc {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionales/HSV6.png);
+        }
+
+        .product-image-verion {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvDireccionales/verion.png);
+        }
+
+        /* Válvulas en línea  */
+        .product-image-altapres {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvEnLinea/altapres.png);
+        }
+
+        .product-image-unidirec {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvEnLinea/unidirec.png);
+        }
+
+        .product-image-bidirec {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvEnLinea/bidirec.png);
+        }
+
+        /* Válvulas Insertables  */
+        .product-image-bajapot {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvInsertables/bajapot.png);
+        }
+
+        .product-image-balanceo {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvInsertables/balanceo.png);
+        }
+
+        .product-image-parker {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvInsertables/parker.png);
+        }
+
+        /* Válvulas Proporcionales  */
+        .product-image-propor {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvProporcionales/propor.png);
+        }
+
+        .product-image-caudal {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvProporcionales/caudal.png);
+        }
+
+        .product-image-direccional {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/ValvProporcionales/direccional.png);
+        }
 
 
          /* Products Section */
@@ -776,15 +1026,6 @@
         .pdf-download-btn i {
             font-size: 1.2rem;
         }
-
-
-
-
-
-
-
-
-
 
 
 
