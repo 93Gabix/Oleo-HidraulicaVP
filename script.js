@@ -23,6 +23,25 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
+// Mostrar/ocultar botón según scroll
+window.addEventListener('scroll', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+// Función para subir suavemente
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 // Contact form submission
 function sendEmail(event) {
     event.preventDefault();
@@ -45,7 +64,7 @@ function sendEmail(event) {
     `;
     
     // Create mailto link
-    const mailtoLink = `mailto:oleohidraulicavp@gmial.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:oleohidraulicavp@gmail.com?subject=Consulta desde la web&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.location.href = mailtoLink;

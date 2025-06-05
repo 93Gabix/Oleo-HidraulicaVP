@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oleo-Hidráulica VP - Soluciones Hidráulicas Profesionales</title>
+    <meta name="description" content="Especialistas en oleohidráulica, sistemas hidráulicos, bombas, cilindros y componentes industriales. Servicio técnico y repuestos.">
+    <meta name="keywords" content="oleohidraulica, sistemas hidraulicos, bombas hidraulicas, cilindros hidraulicos">
+    <meta name="Hidráulica VP" content="Óleo-Hidráulica VP">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,6 +29,11 @@
     <!-- WhatsApp Button -->
     <button class="whatsapp-btn" onclick="openWhatsApp()">
         <i data-lucide="message-circle"></i>
+    </button>
+
+    <!-- Top Button -->
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" onclick="scrollToTop()">
+        <i data-lucide="arrow-up-from-dot"></i>
     </button>
 
     <!-- Hero Section -->
@@ -70,7 +78,7 @@
                     </div>
                     <h3 class="team-name">Juan Visconti</h3>
                     <p class="team-role">Director General</p>
-                    <p class="team-description">Fundador de la empresa con amplia experiencia en sistemas hidráulicos industriales. Especialista en asesoramiento técnico y desarrollo de soluciones personalizadas.</p>
+                    <p class="team-description">Fundador de la empresa con amplia experiencia en sistemas hidráulicos industriales y agrícolas. <br> Especialista en asesoramiento técnico, diseño de soluciones a medida y desarrollo de planos e ingeniería aplicada.</p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">
@@ -80,7 +88,7 @@
                     </div>
                     <h3 class="team-name">Marcela Manzer</h3>
                     <p class="team-role">Gerente Comercial</p>
-                    <p class="team-description">Responsable de las relaciones comerciales y atención al cliente. Coordina las ventas y garantiza la satisfacción de nuestros clientes.</p>
+                    <p class="team-description">Encargada de coordinar las ventas, llevar adelante tareas administrativas y brindar atención a los clientes. Su trabajo es asegurar el buen funcionamiento del área comercial.</p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">
@@ -89,8 +97,8 @@
                         <i data-lucide="user"></i>
                     </div>
                     <h3 class="team-name">Micaela Pepino</h3>
-                    <p class="team-role">Gerente Comercial</p>
-                    <p class="team-description">Responsable de las relaciones comerciales y atención al cliente. Coordina las ventas y garantiza la satisfacción de nuestros clientes.</p>
+                    <p class="team-role">Administración y Ventas</p>
+                    <p class="team-description">Desarrolla tareas administrativas, organiza la gestión comercial y mantiene contacto directo con los clientes para garantizar una atención eficiente.</p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">
@@ -98,8 +106,9 @@
                         <img src="./img/Empleados/mantenimiento.png" alt="#">
                     </div>
                     <h3 class="team-name">Diego,Mateo y Andrés</h3>
-                    <p class="team-role">Técnicos Especialistas</p>
-                    <p class="team-description">Ingenieros técnicos especializados en instalación y mantenimiento de sistemas hidráulicos.</p>
+                    <p class="team-role">Operarios del Taller Hidráulico</p>
+                    <p class="team-description">Cuentan con amplia experiencia en la reparación y mantenimiento de componentes hidráulicos. <br> 
+                        Realizan tareas como desarme, limpieza, cambio de piezas y pruebas de funcionamiento, asegurando un trabajo seguro y prolijo.</p>
                 </div>
             </div>
         </div>
@@ -681,24 +690,25 @@
                             <a href="https://www.instagram.com/oleohidraulicavp/?hl=es" target="_blank" class="social-link" title="Instagram">
                                 <i data-lucide="instagram"></i>
                             </a>
-                            <a href="#" class="social-link" title="LinkedIn">
+                            <!-- <a href="#" class="social-link" title="LinkedIn">
                                 <i data-lucide="#"></i>
                             </a>
                             <a href="#" class="social-link" title="YouTube">
                                 <i data-lucide="#"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
                     <div class="contact-card">
                         <h3><i data-lucide="map-pin"></i> Nuestra Ubicación</h3>
                         <div class="map-container">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.2830487988324!2d-61.957371634665044!3d-30.53330623554042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9435a91349d8e3e9%3A0x411fc7f2361ede70!2s%C3%93LEO-HIDRAULICA%20VP!5e0!3m2!1ses!2sar!4v1749002880767!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3436.6190021575358!2d-61.959121724427334!3d-30.531810774681816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDMxJzU0LjUiUyA2McKwNTcnMjMuNiJX!5e0!3m2!1ses!2sar!4v1749070601571!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
                     <div class="contact-card">
                         <h3><i data-lucide="phone"></i> Información de Contacto</h3>
+                        <p><strong>Dirección:</strong> E. lopez 688</p>
                         <p><strong>Teléfono Juan(Diseño y desarrollo):</strong> +54 9 3562521482</p>
                         <p><strong>Teléfono Marcela/Micaela(Ventas):</strong>&nbsp  +54 9 3562515947</p>
                         <p><strong>Email:</strong> oleohidraulicavp@gmail.com</p>

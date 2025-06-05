@@ -1,1205 +1,1525 @@
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-orange: #FF6B35;
-            --dark-orange: #E55A2B;
-            --light-orange: #FF8C5A;
-            --black: #1a1a1a;
-            --dark-gray: #2d2d2d;
-            --light-gray: #f8f9fa;
-            --white: #ffffff;
-            --text-gray: #6c757d;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--black);
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary-orange);
-        }
-
-        .logo i {
-            margin-right: 0.5rem;
-            font-size: 2rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--black);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-orange);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--primary-orange);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url(./img/FONDO.png);
-            background-size:cover;
-            background-position: center;
-            opacity: 0.5;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, white, var(--light-orange));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Sections */
-        .section {
-            padding: 100px 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--black);
-        }
-
-        .section-title span {
-            color: var(--primary-orange);
-        }
-
-        /* Nosotros Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-gray);
-        }
-
-        .about-stats {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--light-gray);
-            border-radius: 15px;
-            flex: 1;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-orange);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-weight: 500;
-        }
-
-        /* Team Cards */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .team-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--primary-orange), var(--light-orange));
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .team-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .team-avatar i {
-            position: absolute;
-            z-index: 1;
-        }
-
-        .team-avatar:has(img) i {
-            display: none;
-        }
-
-        .team-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--black);
-        }
-
-        .team-role {
-            color: var(--primary-orange);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .team-description {
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        /* Products Section */
-        .products {
-            background: var(--light-gray);
-        }
-
-        .product-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: white;
-            border: 2px solid var(--primary-orange);
-            color: var(--primary-orange);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--primary-orange);
-            color: white;
-        }
-
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .product-image {
-            height: 200px;
-            background: linear-gradient(45deg, var(--light-orange), var(--primary-orange));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-        }
-
-         /* FILTRO DE PRODUCTOS */
-
-
-        /* FILTRO DE ACUMULADORES */
-         .product-image-membrana {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Acumuladores/AcumulMembrana.png);
-            
-        }
-        .product-image-apiston {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Acumuladores/AcumuladorPiston.png);
-            
-        }
-        .product-image-vejiga {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Acumuladores/AcumuladorVejiga.png);
-        }
-
-        /* FILTRO DE BOMBAS */
-        .product-image-engranaje {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Bombas/Bengranajes.png);
-        }
-
-        .product-image-eagricolas {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Bombas/Eagricolas.png);
-        }
-
-        .product-image-Bpistones {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Bombas/Bpistones.png);
-        }
-
-        /* CILINDROS HIDRAULICOS */
-        .product-image-cilihidrulicos {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/CilindrosHidráulicos/cilindroshidraulicos.png);
-        }
-
-        .product-image-dobleagujero {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/CilindrosHidráulicos/cilindrosdobleagujero.png);
-        }
-
-        .product-image-doblevastago {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/CilindrosHidráulicos/cilindrosdoble.png);
-        }
-
-        /* Electro Válvulas */
-        .product-image-valvulatn6-10 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ElectroValvulas/ValvulaTN6-10.png);
-        }
-
-        .product-image-valvulatn10-20-30 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ElectroValvulas/TN10-20-30.png);
-        }
-
-        .product-image-valvulatn10-25-32 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ElectroValvulas/TN10-25-32.png);
-        }
-
-        /* Elementos Transmisión */
-        .product-image-acopestrella {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ElementosTransmision/acoplamientoestrella.png);
-        }
-
-        .product-image-lintmodular {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img//ElementosTransmision/linternamodular.png);
-        }
-
-        .product-image-manguitossae {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ElementosTransmision/manguitossae.png);
-        }
-
-        /* Enfriadores Aceite - Aire */
-        .product-image-aceiteaire01 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Enfriadores/AcieiteAire.png);
-        }
-
-        .product-image-aceiteaire05 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Enfriadores/AcieiteAire05.png);
-        }
-
-        .product-image-aceiteaireAF1025 {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Enfriadores/AcieiteAireAF1025.png);
-        }
-
-        /* Filtración */
-        .product-image-Hydac {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Filtracion/paramontaje.png);
-        }
-
-        .product-image-retorno {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Filtracion/deretorno.png);
-        }
-
-        .product-image-limpieza {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Filtracion/proyectiles.png);
-        }
-
-        /* Instrumentos */
-        .product-image-medpres {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Instrumentos/medpres.png);
-        }
-
-        .product-image-bajapres {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Instrumentos/rotambajapres.png);
-        }
-
-        .product-image-termostato {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/Instrumentos/termostato.png);
-        }
-
-        /* Mini Central Hidraulica */
-        .product-image-bloquevalv {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MiniCentrales/bloquevalv.png);
-        }
-
-        .product-image-motobomba {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MiniCentrales/motobomba.png);
-        }
-
-        .product-image-minihidr {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MiniCentrales/minihidr.png);
-        }
-
-        /* Motores Hidraulicos */
-        .product-image-motorhidra {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MotoresHidraulicos/motorengranaje.png);
-        }
-
-        .product-image-motorpiston {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MotoresHidraulicos/motorpistones.png);
-        }
-
-        .product-image-motororbi {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/MotoresHidraulicos/motororbital.png);
-        }
-
-
-        /* Placas bases */
-        .product-image-salidalateral {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/PlacasBase/salidalateral.png);
-        }
-
-        .product-image-manifoldsespe {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/PlacasBase/manifoldespe.png);
-        }
-
-        .product-image-manihot {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/PlacasBase/manihot.png);
-        }
-
-        /* Reductores, Multiplicadores */
-        .product-image-bridas {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ReductoresMultiplicadores/brida.png);
-        }
-
-        .product-image-enlace {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ReductoresMultiplicadores/enlace.png);
-        }
-
-        .product-image-multi {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ReductoresMultiplicadores/multiplic.png);
-        }
-
-        /* Tanques y Accesorios */
-        .product-image-tanque {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TanquesAccesorios/tanque.png);
-        }
-
-        .product-image-venteo {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TanquesAccesorios/venteo.png);
-        }
-
-        .product-image-bocas {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TanquesAccesorios/bocas.png);
-        }
-
-        /* Transmiciones Hidrostática  */
-        .product-image-pesado {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TransmHidrostaticas/pesado.png);
-        }
-
-        .product-image-circuito {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TransmHidrostaticas/circuito.png);
-        }
-
-        .product-image-motor {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/TransmHidrostaticas/motor.png);
-        }
-
-        /* Válvulas de dirección y accesorios  */
-        .product-image-valv {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionAcces/valvulas.png);
-        }
-
-        .product-image-direc {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionAcces/direc.png);
-        }
-
-        .product-image-pr {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionAcces/direcpr.png);
-        }
-
-        /* Válvulas direccionales manuales  */
-        .product-image-3direc {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionales/3direc.png);
-        }
-
-        .product-image-direc {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionales/HSV6.png);
-        }
-
-        .product-image-verion {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvDireccionales/verion.png);
-        }
-
-        /* Válvulas en línea  */
-        .product-image-altapres {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvEnLinea/altapres.png);
-        }
-
-        .product-image-unidirec {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvEnLinea/unidirec.png);
-        }
-
-        .product-image-bidirec {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvEnLinea/bidirec.png);
-        }
-
-        /* Válvulas Insertables  */
-        .product-image-bajapot {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvInsertables/bajapot.png);
-        }
-
-        .product-image-balanceo {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvInsertables/balanceo.png);
-        }
-
-        .product-image-parker {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvInsertables/parker.png);
-        }
-
-        /* Válvulas Proporcionales  */
-        .product-image-propor {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvProporcionales/propor.png);
-        }
-
-        .product-image-caudal {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvProporcionales/caudal.png);
-        }
-
-        .product-image-direccional {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-position: center;
-            background-size: cover;
-            background-image: url(./img/ValvProporcionales/direccional.png);
-        }
-
-
-         /* Products Section */
-         .products {
-            background: var(--light-gray);
-        }
-
-        .product-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: white;
-            border: 2px solid var(--primary-orange);
-            color: var(--primary-orange);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--primary-orange);
-            color: white;
-        }
-
-        /* No filter message */
-        .no-filter-message {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 300px;
-        }
-
-        .filter-instruction {
-            text-align: center;
-            padding: 3rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-
-        .filter-instruction i {
-            font-size: 4rem;
-            color: var(--primary-orange);
-            margin-bottom: 1rem;
-        }
-
-        .filter-instruction h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-
-        .filter-instruction p {
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        /* PDF Download Section */
-        .pdf-download-section {
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .pdf-download-btn {
-            background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .pdf-download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .pdf-download-btn i {
-            font-size: 1.2rem;
-        }
-
-
-
-        .product-info {
-            padding: 1.5rem;
-        }
-
-        .product-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--black);
-        }
-
-        .product-description {
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--black);
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--primary-orange);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .contact-card h3 {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: var(--primary-orange);
-            font-size: 1.3rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-orange);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            transform: scale(1.1);
-            background: var(--dark-orange);
-        }
-
-        .map-container {
-            height: 300px;
-            background: var(--light-gray);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-gray);
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--black);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-stats {
-                flex-direction: column;
-            }
-
-            .product-filters {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Hidden class for product filtering */
-        .hidden {
-            display: none !important;
-            opacity: 0;
-        }
-
-        /* Smooth transitions for product cards */
-        .product-card {
-            transition: all 0.3s ease;
-            opacity: 1;
-        }
-
-        .product-card.hidden {
-            opacity: 0;
-            transform: scale(0.8);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-orange: #FF6B35;
+    --dark-orange: #E55A2B;
+    --light-orange: #FF8C5A;
+    --black: #1a1a1a;
+    --dark-gray: #2d2d2d;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --text-gray: #6c757d;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Botón Scroll to Top */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 100px; /* Arriba del botón de WhatsApp */
+    right: 30px;
+    background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    transform: scale(1.1) translateY(0);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+    background: linear-gradient(45deg, var(--dark-orange), var(--primary-orange));
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+    color: white;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/FONDO.png);
+    background-size:cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, white, var(--light-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.section-title span {
+    color: var(--primary-orange);
+}
+
+/* Nosotros Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+.about-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: 15px;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    display: block;
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* Team Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-orange), var(--light-orange));
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-avatar i {
+    position: absolute;
+    z-index: 1;
+}
+
+.team-avatar:has(img) i {
+    display: none;
+}
+
+.team-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.team-role {
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Products Section */
+.products {
+    background: var(--light-gray);
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary-orange);
+    color: white;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    height: 200px;
+    background: linear-gradient(45deg, var(--light-orange), var(--primary-orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+ /* FILTRO DE PRODUCTOS */
+
+
+/* FILTRO DE ACUMULADORES */
+ .product-image-membrana {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Acumuladores/AcumulMembrana.png);
+    
+}
+.product-image-apiston {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Acumuladores/AcumuladorPiston.png);
+    
+}
+.product-image-vejiga {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Acumuladores/AcumuladorVejiga.png);
+}
+
+/* FILTRO DE BOMBAS */
+.product-image-engranaje {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Bombas/Bengranajes.png);
+}
+
+.product-image-eagricolas {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Bombas/Eagricolas.png);
+}
+
+.product-image-Bpistones {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Bombas/Bpistones.png);
+}
+
+/* CILINDROS HIDRAULICOS */
+.product-image-cilihidrulicos {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/CilindrosHidráulicos/cilindroshidraulicos.png);
+}
+
+.product-image-dobleagujero {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/CilindrosHidráulicos/cilindrosdobleagujero.png);
+}
+
+.product-image-doblevastago {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/CilindrosHidráulicos/cilindrosdoble.png);
+}
+
+/* Electro Válvulas */
+.product-image-valvulatn6-10 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ElectroValvulas/ValvulaTN6-10.png);
+}
+
+.product-image-valvulatn10-20-30 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ElectroValvulas/TN10-20-30.png);
+}
+
+.product-image-valvulatn10-25-32 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ElectroValvulas/TN10-25-32.png);
+}
+
+/* Elementos Transmisión */
+.product-image-acopestrella {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ElementosTransmision/acoplamientoestrella.png);
+}
+
+.product-image-lintmodular {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img//ElementosTransmision/linternamodular.png);
+}
+
+.product-image-manguitossae {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ElementosTransmision/manguitossae.png);
+}
+
+/* Enfriadores Aceite - Aire */
+.product-image-aceiteaire01 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Enfriadores/AcieiteAire.png);
+}
+
+.product-image-aceiteaire05 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Enfriadores/AcieiteAire05.png);
+}
+
+.product-image-aceiteaireAF1025 {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Enfriadores/AcieiteAireAF1025.png);
+}
+
+/* Filtración */
+.product-image-Hydac {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Filtracion/paramontaje.png);
+}
+
+.product-image-retorno {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Filtracion/deretorno.png);
+}
+
+.product-image-limpieza {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Filtracion/proyectiles.png);
+}
+
+/* Instrumentos */
+.product-image-medpres {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Instrumentos/medpres.png);
+}
+
+.product-image-bajapres {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Instrumentos/rotambajapres.png);
+}
+
+.product-image-termostato {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Instrumentos/termostato.png);
+}
+
+/* Mini Central Hidraulica */
+.product-image-bloquevalv {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MiniCentrales/bloquevalv.png);
+}
+
+.product-image-motobomba {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MiniCentrales/motobomba.png);
+}
+
+.product-image-minihidr {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MiniCentrales/minihidr.png);
+}
+
+/* Motores Hidraulicos */
+.product-image-motorhidra {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MotoresHidraulicos/motorengranaje.png);
+}
+
+.product-image-motorpiston {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MotoresHidraulicos/motorpistones.png);
+}
+
+.product-image-motororbi {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/MotoresHidraulicos/motororbital.png);
+}
+
+
+/* Placas bases */
+.product-image-salidalateral {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/PlacasBase/salidalateral.png);
+}
+
+.product-image-manifoldsespe {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/PlacasBase/manifoldespe.png);
+}
+
+.product-image-manihot {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/PlacasBase/manihot.png);
+}
+
+/* Reductores, Multiplicadores */
+.product-image-bridas {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ReductoresMultiplicadores/brida.png);
+}
+
+.product-image-enlace {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ReductoresMultiplicadores/enlace.png);
+}
+
+.product-image-multi {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ReductoresMultiplicadores/multiplic.png);
+}
+
+/* Tanques y Accesorios */
+.product-image-tanque {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TanquesAccesorios/tanque.png);
+}
+
+.product-image-venteo {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TanquesAccesorios/venteo.png);
+}
+
+.product-image-bocas {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TanquesAccesorios/bocas.png);
+}
+
+/* Transmiciones Hidrostática  */
+.product-image-pesado {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TransmHidrostaticas/pesado.png);
+}
+
+.product-image-circuito {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TransmHidrostaticas/circuito.png);
+}
+
+.product-image-motor {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/TransmHidrostaticas/motor.png);
+}
+
+/* Válvulas de dirección y accesorios  */
+.product-image-valv {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionAcces/valvulas.png);
+}
+
+.product-image-direc {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionAcces/direc.png);
+}
+
+.product-image-pr {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionAcces/direcpr.png);
+}
+
+/* Válvulas direccionales manuales  */
+.product-image-3direc {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionales/3direc.png);
+}
+
+.product-image-direc {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionales/HSV6.png);
+}
+
+.product-image-verion {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvDireccionales/verion.png);
+}
+
+/* Válvulas en línea  */
+.product-image-altapres {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvEnLinea/altapres.png);
+}
+
+.product-image-unidirec {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvEnLinea/unidirec.png);
+}
+
+.product-image-bidirec {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvEnLinea/bidirec.png);
+}
+
+/* Válvulas Insertables  */
+.product-image-bajapot {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvInsertables/bajapot.png);
+}
+
+.product-image-balanceo {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvInsertables/balanceo.png);
+}
+
+.product-image-parker {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvInsertables/parker.png);
+}
+
+/* Válvulas Proporcionales  */
+.product-image-propor {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvProporcionales/propor.png);
+}
+
+.product-image-caudal {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvProporcionales/caudal.png);
+}
+
+.product-image-direccional {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/ValvProporcionales/direccional.png);
+}
+
+
+ /* Products Section */
+ .products {
+    background: var(--light-gray);
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary-orange);
+    color: white;
+}
+
+/* No filter message */
+.no-filter-message {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.filter-instruction {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.filter-instruction i {
+    font-size: 4rem;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.filter-instruction h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.filter-instruction p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* PDF Download Section */
+.pdf-download-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.pdf-download-btn {
+    background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pdf-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+.pdf-download-btn i {
+    font-size: 1.2rem;
+}
+
+
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.product-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-orange);
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-orange);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    background: var(--dark-orange);
+}
+
+.map-container {
+    height: 300px;
+    background: var(--light-gray);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--black);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        flex-direction: column;
+    }
+
+    .product-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Contact section improvements */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+        margin: 0 1rem; /* Añadir margen lateral */
+    }
+    
+    .contact-info {
+        margin: 0 1rem; /* Añadir margen lateral */
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+    
+    .contact-card h3 {
+        font-size: 1.1rem;
+        gap: 0.8rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .map-container {
+        height: 250px;
+        margin: 0 1rem;
+    }
+    
+    /* Form improvements */
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .form-textarea {
+        min-height: 100px;
+    }
+    
+    /* CTA button responsivo */
+    .cta-button,
+    .pdf-download-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    /* Prevenir desbordamiento general */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Contenedores principales */
+    .container {
+        padding: 0 0.75rem;
+        width: 100%;
+    }
+    
+    /* Header y navegación */
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .logo i {
+        font-size: 1.6rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: 120px 0 80px;
+    }
+    
+    .hero-container {
+        padding: 0 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Secciones */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    /* Contacto específico */
+    .contact-form,
+    .contact-info {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .contact-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .contact-card h3 {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    /* Información de contacto en texto */
+    .contact-card p,
+    .contact-card div {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Mapa */
+    .map-container {
+        height: 200px;
+        margin: 0;
+        width: 100%;
+    }
+    
+    /* Redes sociales */
+    .social-links {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    /* Formulario */
+    .form-input,
+    .form-textarea {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .form-textarea {
+        min-height: 80px;
+    }
+    
+    /* Botones */
+    .cta-button,
+    .pdf-download-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        width: fit-content;
+        max-width: 100%;
+    }
+    
+    /* Estadísticas */
+    .about-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat {
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Filtros de productos */
+    .product-filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: fit-content;
+        max-width: 90%;
+        text-align: center;
+    }
+    
+    /* Galería de productos */
+    .product-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .product-card {
+        margin: 0;
+        width: 100%;
+    }
+    
+    /* Botones flotantes */
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .scroll-to-top-btn {
+        bottom: 75px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Para pantallas extremadamente pequeñas */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .contact-card {
+        padding: 0.8rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+
+/* Smooth transitions for product cards */
+.product-card {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.product-card.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+}
+}
