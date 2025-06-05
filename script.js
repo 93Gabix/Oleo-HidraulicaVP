@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // WhatsApp function
 function openWhatsApp() {
-    const message = "👷🏼 ¡Hola! Gracias por contactarnos. 👷🏼";
+    const message = "👋 ¡Hola! Me contacté desde la web de Óleo-Hidráulica VP. Estoy interesado/a en obtener más información sobre sus productos y servicios. ¿Podrían ayudarme?";
     const phoneNumber = "5493562515947"; // Reemplaza con tu número de WhatsApp
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
