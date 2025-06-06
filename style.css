@@ -376,21 +376,45 @@ body {
     flex-wrap: wrap;
 }
 
+/* Badge "NUEVO" para filtros con productos nuevos */
+.filter-btn.has-new::after {
+    content: 'NUEVO';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 .filter-btn {
-    background: white;
-    border: 2px solid var(--primary-orange);
-    color: var(--primary-orange);
-    padding: 0.8rem 1.5rem;
+    background: #fff;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 600;
+    font-weight: 500;
+    position: relative;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--primary-orange);
+    background: #e67e22;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
 }
 
 .product-gallery {
@@ -956,6 +980,53 @@ body {
     background-position: center;
     background-size: cover;
     background-image: url(./img/ValvProporcionales/direccional.png);
+}
+
+/* Banderilleros y PA  */
+.product-image-bande {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Banderilleros/pilotoautomatico.png);
+}
+
+.product-image-pa {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Banderilleros/prox.png);
+}
+
+/* Display y Microcontroladores */
+.product-image-disp {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Displays/displays.png);
+}
+
+.product-image-products {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Displays/displays2.png);
+}
+
+.product-image-murphy {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/Displays/murphy.png);
 }
 
 

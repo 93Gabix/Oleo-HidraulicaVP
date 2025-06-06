@@ -1,6 +1,39 @@
 // Initialize Lucide icons
 lucide.createIcons();
 
+
+ // Sistema de filtros
+ document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const noFilterMessage = document.getElementById('noFilterMessage');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Actualizar botones activos
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Ocultar mensaje inicial
+            noFilterMessage.style.display = 'none';
+            
+            // Filtrar productos
+            productCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show');
+                }
+            });
+        });
+    });
+
+    // Mostrar todos los productos por defecto
+    document.querySelector('[data-filter="all"]').click();
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -218,6 +251,7 @@ function downloadPDF(category, categoryName) {
         'acumuladores': './pdfs/Acumuladores.pdf',
         'bombas': './pdfs/Bombas.pdf',
         'cilindroshidráulicos': './pdfs/CilindrosHidráulicos.pdf',
+        'display': './pdfs/EnovationDISPLAYSUN.pdf',
         'electrovalvulas': './pdfs/ElectroválvulasVálvulasModularesMontaje.pdf',
         'elemtransmision': './pdfs/Elementos de transmisión-AcoplamientoselásticosParamotoreléctrico.pdf',
         'enfriadores': './pdfs/EnfriadoresDeAire-aceite.pdf',
@@ -282,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'acumuladores': 'Acumuladores',
         'bombas': 'Bombas',
         'cilindroshidraulicos': 'Cilindros Hidráulicos',
+        'display': 'Enovation DISPLAY SUN',
         'electrovalvulas': 'Electroválvulas y Válvulas Modulares',
         'elemtransmision': 'Elementos de Transmisión',
         'enfriadores': 'Enfriadores',
